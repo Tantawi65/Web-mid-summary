@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive study guide for Web Programming midterm covering HTML, CSS, and JavaScript">
+    <title>Web Programming Study Guide</title>
+    <link rel="stylesheet" href="study-style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav id="navbar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#html-section">HTML & XHTML</a></li>
+            <li><a href="#css-section">CSS</a></li>
+            <li><a href="#js-section">JavaScript</a></li>
+            <li><a href="#quiz-section">Quiz Questions</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Web Programming & Networking Study Guide</h1>
+        <p class="subtitle">Comprehensive Midterm Review</p>
+    </header>
+
+    <main>
+        <!-- HTML & XHTML Section -->
+        <section id="html-section">
+            <h2>HTML & XHTML</h2>
+            
+            <article class="note-card">
+                <h3>WWW vs Internet</h3>
+                <p><strong>Important Note:</strong> The World Wide Web (WWW) and the Internet are <strong>NOT</strong> the same thing.</p>
+                <ul>
+                    <li><strong>Internet:</strong> The global network of interconnected computers and servers</li>
+                    <li><strong>WWW:</strong> A service that runs on the Internet, consisting of web pages accessed through browsers</li>
+                    <li>Think of it this way: The Internet is like the highway system, and the WWW is like the cars traveling on it</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>HTML Basics</h3>
+                <p><strong>HTML</strong> stands for <strong>Hypertext Markup Language</strong></p>
+                <p><strong>XHTML</strong> uses a markup format called <strong>XML</strong> (eXtensible Markup Language)</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Block vs Inline Elements</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Block Elements</h4>
+                        <p>Contain an entire large region of content</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Paragraphs (&lt;p&gt;)</li>
+                            <li>Lists (&lt;ul&gt;, &lt;ol&gt;)</li>
+                            <li>Table cells (&lt;td&gt;)</li>
+                            <li>Divs (&lt;div&gt;)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Inline Elements</h4>
+                        <p>Affect a small amount of content</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Bold text (&lt;strong&gt;)</li>
+                            <li>Code fragments (&lt;code&gt;)</li>
+                            <li>Images (&lt;img&gt;)</li>
+                            <li>Spans (&lt;span&gt;)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Tag Nesting Rules</h3>
+                <p><strong>Critical Rule:</strong> Tags must be correctly nested - a closing tag must match the most recently opened tag</p>
+                <div class="code-example">
+                    <p class="correct">✓ Correct: <code>&lt;p&gt;&lt;em&gt;text&lt;/em&gt;&lt;/p&gt;</code></p>
+                    <p class="incorrect">✗ Incorrect: <code>&lt;p&gt;&lt;em&gt;text&lt;/p&gt;&lt;/em&gt;</code></p>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Image Elements</h3>
+                <p>The <code>src</code> attribute specifies the source URL of the image</p>
+                <p>XHTML <strong>requires</strong> an <code>alt</code> attribute describing the image for accessibility</p>
+                <p><strong>Tip:</strong> If an image is placed inside an <code>&lt;a&gt;</code> tag, the image becomes a clickable link</p>
+                <div class="code-example">
+                    <code>&lt;a href="page.html"&gt;&lt;img src="image.jpg" alt="Description"&gt;&lt;/a&gt;</code>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>HTML Comments</h3>
+                <p>Comments in HTML are written as:</p>
+                <div class="code-example">
+                    <code>&lt;!-- This is a comment --&gt;</code>
+                </div>
+                <p>Comments are not displayed in the browser and are used for documentation</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Text Emphasis Elements</h3>
+                <p><strong>Important:</strong> Tags must be properly nested for a valid page</p>
+                <ul>
+                    <li><code>&lt;em&gt;</code>: <em>Emphasized text (usually displayed in italic)</em></li>
+                    <li><code>&lt;strong&gt;</code>: <strong>Strongly emphasized text (usually displayed in bold)</strong></li>
+                </ul>
+                <div class="code-example">
+                    <p>Example of proper nesting:</p>
+                    <code>&lt;p&gt;This is &lt;strong&gt;very &lt;em&gt;important&lt;/em&gt;&lt;/strong&gt; text&lt;/p&gt;</code>
+                    <p>Displays as: This is <strong>very <em>important</em></strong> text</p>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Definition Lists (Description Lists)</h3>
+                <p>Also called <strong>Description Lists</strong>, they use the <code>&lt;dl&gt;</code> tag</p>
+                <ul>
+                    <li><code>&lt;dl&gt;</code>: Definition/Description List container</li>
+                    <li><code>&lt;dt&gt;</code>: Definition Term (the term being defined)</li>
+                    <li><code>&lt;dd&gt;</code>: Definition Description (the description of the term)</li>
+                </ul>
+                <div class="code-example">
+                    <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+                <p><strong>Result:</strong></p>
+                <dl class="example">
+                    <dt>HTML</dt>
+                    <dd>Hypertext Markup Language</dd>
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets</dd>
+                </dl>
+            </article>
+
+            <article class="note-card">
+                <h3>Tables</h3>
+                <p><strong>Table Elements:</strong></p>
+                <ul>
+                    <li><code>&lt;table&gt;</code>: Defines the table container</li>
+                    <li><code>&lt;tr&gt;</code>: Table Row</li>
+                    <li><code>&lt;td&gt;</code>: Table Data (cell)</li>
+                    <li><code>&lt;th&gt;</code>: Table Header (bold and centered by default)</li>
+                    <li><code>&lt;caption&gt;</code>: Table caption (title)</li>
+                    <li><code>&lt;thead&gt;</code>: Groups header content</li>
+                    <li><code>&lt;tbody&gt;</code>: Groups body content</li>
+                    <li><code>&lt;tfoot&gt;</code>: Groups footer content</li>
+                </ul>
+                <div class="code-example">
+                    <pre><code>&lt;table&gt;
+    &lt;caption&gt;Student Grades&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Grade&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John&lt;/td&gt;
+            &lt;td&gt;A&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <table class="example-table">
+                    <caption>Student Grades</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Jane</td>
+                            <td>B+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="note-card">
+                <h3>Quotations</h3>
+                <p><strong>Two types of quotation elements:</strong></p>
+                <ul>
+                    <li><code>&lt;blockquote&gt;</code>: For long, block-level quotations (indented)</li>
+                    <li><code>&lt;q&gt;</code>: For short, inline quotations (adds quotation marks)</li>
+                </ul>
+                <p><strong>Why use these tags instead of literal " marks?</strong></p>
+                <ol>
+                    <li>XHTML shouldn't contain literal quotation marks; they should be written as <code>&amp;quot;</code></li>
+                    <li>Using <code>&lt;q&gt;</code> and <code>&lt;blockquote&gt;</code> allows us to apply CSS styles to quotations</li>
+                </ol>
+                <div class="code-example">
+                    <p><code>&lt;blockquote&gt;To be or not to be...&lt;/blockquote&gt;</code></p>
+                    <p><code>&lt;p&gt;He said &lt;q&gt;Hello&lt;/q&gt; to me.&lt;/p&gt;</code></p>
+                </div>
+                <blockquote>To be or not to be, that is the question.</blockquote>
+                <p>He said <q>Hello</q> to me.</p>
+            </article>
+
+            <article class="note-card">
+                <h3>HTML Character Entities</h3>
+                <p><strong>Important character entities to remember:</strong></p>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Entity</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lt;</td>
+                            <td><code>&amp;lt;</code></td>
+                            <td>Less than</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td><code>&amp;gt;</code></td>
+                            <td>Greater than</td>
+                        </tr>
+                        <tr>
+                            <td>&amp;</td>
+                            <td><code>&amp;amp;</code></td>
+                            <td>Ampersand</td>
+                        </tr>
+                        <tr>
+                            <td>&quot;</td>
+                            <td><code>&amp;quot;</code></td>
+                            <td>Quotation mark</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><code>&amp;nbsp;</code></td>
+                            <td>Non-breaking space</td>
+                        </tr>
+                        <tr>
+                            <td>&copy;</td>
+                            <td><code>&amp;copy;</code></td>
+                            <td>Copyright symbol</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="note-card">
+                <h3>Code Elements</h3>
+                <p><code>&lt;code&gt;</code>: Used for a short section of computer code</p>
+                <p>Example: The <code>printf()</code> function displays output.</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Preformatted Text</h3>
+                <p><code>&lt;pre&gt;</code>: Displays text with exactly the whitespace and line breaks given</p>
+                <p><strong>Best Practice:</strong> When showing a large section of computer code, enclose it in:</p>
+                <ul>
+                    <li><code>&lt;pre&gt;</code> to preserve whitespace</li>
+                    <li><code>&lt;code&gt;</code> to describe the semantics of the content</li>
+                </ul>
+                <div class="code-example">
+                    <pre><code>&lt;pre&gt;&lt;code&gt;
+function hello() {
+    console.log("Hello World");
+}
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Meta Description</h3>
+                <p>Used in the <code>&lt;head&gt;</code> section for SEO:</p>
+                <div class="code-example">
+                    <code>&lt;meta name="description" content="This is a concise and informative description of the content on this webpage, optimized for search engines."&gt;</code>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Additional Text Elements</h3>
+                <ul>
+                    <li><code>&lt;sub&gt;</code>: Subscript text - H<sub>2</sub>O</li>
+                    <li><code>&lt;sup&gt;</code>: Superscript text - x<sup>2</sup></li>
+                    <li><code>&lt;del&gt;</code>: Deleted text - <del>strikethrough</del></li>
+                    <li><code>&lt;ins&gt;</code>: Inserted text - <ins>underlined</ins></li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>HTML5 Elements</h3>
+                <ul>
+                    <li><code>&lt;canvas&gt;</code>: Allows you to create 2D graphics using JavaScript</li>
+                    <li><code>&lt;video&gt;</code>: Embeds video content</li>
+                    <li><code>&lt;audio&gt;</code>: Embeds audio content</li>
+                    <li><code>&lt;progress&gt;</code>: Displays a loading/progress bar</li>
+                    <li><code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>: Provides a collapsible section</li>
+                    <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: Groups images and their captions</li>
+                    <li><code>&lt;template&gt;</code>: Defines reusable HTML code</li>
+                    <li><code>&lt;address&gt;</code>: Defines contact information</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Embedding YouTube Videos</h3>
+                <p>Use the <code>&lt;iframe&gt;</code> element to embed YouTube videos:</p>
+                <div class="code-example">
+                    <code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Favicon (Favorites Icon)</h3>
+                <p>A <strong>favicon</strong> is the small icon that appears in the browser tab next to the page title.</p>
+                <p><strong>How to use it:</strong></p>
+                <div class="code-example">
+                    <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+                </div>
+                <p>Place this in the <code>&lt;head&gt;</code> section of your HTML document</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Image Maps</h3>
+                <p>The <code>usemap</code> attribute specifies an image map in HTML</p>
+                <p>Image maps allow you to create clickable areas on an image</p>
+                <div class="code-example">
+                    <code>&lt;img src="map.jpg" usemap="#imagemap" alt="Map"&gt;</code>
+                </div>
+            </article>
+        </section>
+
+        <!-- CSS Section -->
+        <section id="css-section">
+            <h2>CSS (Cascading Style Sheets)</h2>
+
+            <article class="note-card">
+                <h3>CSS Basics</h3>
+                <p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong></p>
+                <p>A page can link to multiple style sheet files</p>
+                <p><strong>Important:</strong> In case of a conflict (two sheets define a style for the same HTML element), the latter sheet's properties will be used</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Embedded CSS</h3>
+                <p>CSS code can be embedded within the <code>&lt;head&gt;</code> of an HTML page</p>
+                <p><strong>Warning:</strong> This is bad style and should be avoided when possible</p>
+                <p><strong>Why?</strong> Because it:</p>
+                <ul>
+                    <li>Mixes content (HTML) with presentation (CSS)</li>
+                    <li>Makes code harder to maintain</li>
+                    <li>Prevents style reuse across multiple pages</li>
+                    <li>Increases page load time (CSS can't be cached separately)</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Specifying Colors</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Color Names</h4>
+                        <p>aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow</p>
+                    </div>
+                    <div>
+                        <h4>RGB Codes</h4>
+                        <p>Red, green, and blue values from 0 (none) to 255 (full)</p>
+                        <code>rgb(255, 0, 0)</code>
+                    </div>
+                </div>
+                <h4>Hex Codes</h4>
+                <p>RGB values in base-16 from 00 (0, none) to FF (255, full)</p>
+                <p>Example: <code>#FF0000</code> (red), <code>#FFFFFF</code> (white), <code>#000000</code> (black)</p>
+            </article>
+
+            <article class="note-card">
+                <h3>CSS Comments</h3>
+                <p>CSS comments use <code>/* ... */</code></p>
+                <p><strong>Important:</strong> The <code>//</code> single-line comment style is NOT supported in CSS</p>
+                <div class="code-example">
+                    <code>/* This is a CSS comment */</code>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Font Properties</h3>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>font-family</code></td>
+                            <td>Which font will be used</td>
+                            <td>"Arial", "Times New Roman", sans-serif, serif, monospace</td>
+                        </tr>
+                        <tr>
+                            <td><code>font-size</code></td>
+                            <td>How large the letters will be drawn</td>
+                            <td>12pt, 16px, 1.5em, 100%, small, medium, large</td>
+                        </tr>
+                        <tr>
+                            <td><code>font-style</code></td>
+                            <td>Enable/disable italic style</td>
+                            <td>normal, italic, oblique</td>
+                        </tr>
+                        <tr>
+                            <td><code>font-weight</code></td>
+                            <td>Enable/disable bold style</td>
+                            <td>normal, bold, bolder, lighter, 100-900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="note-card">
+                <h3>Text Properties</h3>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>text-align</code></td>
+                            <td>left, right, center, justify</td>
+                        </tr>
+                        <tr>
+                            <td><code>text-decoration</code></td>
+                            <td>none, underline, overline, line-through</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="note-card">
+                <h3>List Style Properties</h3>
+                <p><code>list-style-type</code>: Controls the appearance of list markers</p>
+                <p><strong>Values:</strong></p>
+                <ul>
+                    <li>For <code>&lt;ul&gt;</code>: disc, circle, square, none</li>
+                    <li>For <code>&lt;ol&gt;</code>: decimal, lower-roman, upper-roman, lower-alpha, upper-alpha</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Background Properties</h3>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>background-image</code></td>
+                            <td>url("image.jpg"), none</td>
+                        </tr>
+                        <tr>
+                            <td><code>background-repeat</code></td>
+                            <td>repeat, repeat-x, repeat-y, no-repeat</td>
+                        </tr>
+                        <tr>
+                            <td><code>background-position</code></td>
+                            <td>top, bottom, left, right, center<br>Or: horizontal vertical (e.g., "50px 100px")</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Background Position Order:</strong></p>
+                <ul>
+                    <li>First value = horizontal (x-axis, from left)</li>
+                    <li>Second value = vertical (y-axis, from top)</li>
+                </ul>
+                <div class="code-example">
+                    <p><code>background-position: 0px 0px;</code> → Top-left corner</p>
+                    <p><code>background-position: 50px 100px;</code> → 50px from left, 100px from top</p>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>CSS ID Selectors</h3>
+                <p>ID selectors use the <code>#</code> symbol</p>
+                <div class="code-example">
+                    <pre><code>#header {
+    background-color: blue;
+    color: white;
+}
+
+#main {
+    width: 80%;
+    margin: 0 auto;
+}</code></pre>
+                </div>
+                <p>Use in HTML: <code>&lt;div id="header"&gt;...&lt;/div&gt;</code></p>
+            </article>
+
+            <article class="note-card">
+                <h3>Link Pseudo-Classes</h3>
+                <p><strong>Important Order: LoVe HAte</strong></p>
+                <ul>
+                    <li><code>:link</code> → <strong>L</strong>ink</li>
+                    <li><code>:visited</code> → <strong>V</strong>isited</li>
+                    <li><code>:hover</code> → <strong>HA</strong>te</li>
+                    <li><code>:active</code> → <strong>te</strong> (active)</li>
+                </ul>
+                <div class="code-example">
+                    <pre><code>a:link { color: #FF0000; }      /* unvisited link */
+a:visited { color: #00FF00; }  /* visited link */
+a:hover { color: #FF00FF; }    /* mouse over link */
+a:active { color: #0000FF; }   /* activated link */</code></pre>
+                </div>
+                <p><strong>Why this order?</strong> Because of CSS specificity rules - if they're out of order, some styles won't apply correctly</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Other Pseudo-Classes and Pseudo-Elements</h3>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>:active</code></td>
+                            <td>An activated or selected element</td>
+                        </tr>
+                        <tr>
+                            <td><code>:focus</code></td>
+                            <td>An element that has keyboard focus</td>
+                        </tr>
+                        <tr>
+                            <td><code>:hover</code></td>
+                            <td>An element that has the mouse over it</td>
+                        </tr>
+                        <tr>
+                            <td><code>:link</code></td>
+                            <td>A link that has not been visited</td>
+                        </tr>
+                        <tr>
+                            <td><code>:visited</code></td>
+                            <td>A link that has already been visited</td>
+                        </tr>
+                        <tr>
+                            <td><code>::first-letter</code></td>
+                            <td>The first letter of text inside an element</td>
+                        </tr>
+                        <tr>
+                            <td><code>::first-line</code></td>
+                            <td>The first line of text inside an element</td>
+                        </tr>
+                        <tr>
+                            <td><code>:first-child</code></td>
+                            <td>An element that is the first one to appear inside another</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="note-card">
+                <h3>Span vs Div</h3>
+                <ul>
+                    <li><code>&lt;span&gt;</code>: <strong>Inline</strong> element - doesn't break the flow of text</li>
+                    <li><code>&lt;div&gt;</code>: <strong>Block</strong> element - creates a new block/section</li>
+                </ul>
+                <p>Both are generic containers used for styling purposes</p>
+            </article>
+
+            <article class="note-card">
+                <h3>The CSS Box Model</h3>
+                <p>Every element is composed of:</p>
+                <ol>
+                    <li><strong>Content</strong>: The actual content (text, images, etc.)</li>
+                    <li><strong>Padding</strong>: Space between content and border</li>
+                    <li><strong>Border</strong>: A border around the padding</li>
+                    <li><strong>Margin</strong>: Space between the border and other elements</li>
+                </ol>
+                <div class="box-model-demo">
+                    <div class="margin-demo">Margin
+                        <div class="border-demo">Border
+                            <div class="padding-demo">Padding
+                                <div class="content-demo">Content</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Border Properties</h3>
+                <p><code>border-style</code> values:</p>
+                <ul>
+                    <li>none, solid, dashed, dotted, double, groove, ridge, inset, outset</li>
+                </ul>
+                <div class="code-example">
+                    <pre><code>border: 2px solid black;
+border-width: 1px 2px 3px 4px; /* top right bottom left */
+border-color: red;
+border-radius: 10px; /* rounded corners */</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Padding</h3>
+                <p>Each side's padding can be set individually</p>
+                <p><strong>Important:</strong> Padding shares the background color of the element</p>
+                <div class="code-example">
+                    <pre><code>padding: 10px;              /* all sides */
+padding: 10px 20px;         /* vertical horizontal */
+padding: 10px 20px 30px 40px; /* top right bottom left */
+padding-top: 10px;
+padding-right: 20px;
+padding-bottom: 30px;
+padding-left: 40px;</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Margin</h3>
+                <p><strong>Important:</strong> Margins are always transparent</p>
+                <div class="code-example">
+                    <pre><code>margin: 10px;              /* all sides */
+margin: 10px 20px;         /* vertical horizontal */
+margin: 10px 20px 30px 40px; /* top right bottom left */
+margin: 0 auto;            /* center horizontally */</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Size Constraints</h3>
+                <ul>
+                    <li><code>max-width</code>: Maximum width an element can have</li>
+                    <li><code>max-height</code>: Maximum height an element can have</li>
+                    <li><code>min-width</code>: Minimum width an element must have</li>
+                    <li><code>min-height</code>: Minimum height an element must have</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Float and Clear</h3>
+                <p><strong>float</strong>: Allows elements to float to the left or right</p>
+                <ul>
+                    <li>Values: left, right, none</li>
+                    <li>Floated elements are taken out of normal document flow</li>
+                    <li>Other content wraps around floated elements</li>
+                </ul>
+                <p><strong>clear</strong>: Prevents elements from wrapping around floated elements</p>
+                <ul>
+                    <li>Values: left, right, both, none</li>
+                    <li>Forces element to appear below floated elements</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Position Property</h3>
+                <p><strong>Values:</strong></p>
+                <ul>
+                    <li><code>static</code>: Default positioning (normal flow)</li>
+                    <li><code>relative</code>: Positioned relative to its normal position</li>
+                    <li><code>absolute</code>: Positioned relative to nearest positioned ancestor</li>
+                    <li><code>fixed</code>: Positioned relative to viewport (stays in place when scrolling)</li>
+                    <li><code>sticky</code>: Toggles between relative and fixed based on scroll position</li>
+                </ul>
+                <p>Use with: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> properties</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Display Property</h3>
+                <p>Controls the layout behavior of an element</p>
+                <p><strong>Common values:</strong></p>
+                <ul>
+                    <li><code>block</code>: Element takes full width available</li>
+                    <li><code>inline</code>: Element takes only necessary width</li>
+                    <li><code>inline-block</code>: Inline element that can have width/height</li>
+                    <li><code>none</code>: Element is not displayed (takes no space)</li>
+                    <li><code>flex</code>: Flexible box layout</li>
+                    <li><code>grid</code>: Grid layout</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Overflow Property</h3>
+                <p>Controls what happens when content overflows its container</p>
+                <ul>
+                    <li><code>visible</code>: Content overflows (default)</li>
+                    <li><code>hidden</code>: Overflow is clipped and invisible</li>
+                    <li><code>scroll</code>: Adds scrollbars</li>
+                    <li><code>auto</code>: Adds scrollbars only when needed</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>Visibility vs Display</h3>
+                <p><code>visibility: hidden</code> - Elements will still take up space onscreen, but will not be shown</p>
+                <p><code>display: none</code> - Elements will not take up any space</p>
+                <p><strong>Use case:</strong> Can be used to show/hide dynamic HTML content in response to events</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Z-Index</h3>
+                <p>Specifies the stacking order of elements</p>
+                <ul>
+                    <li>Higher values appear on top of lower values</li>
+                    <li>Only works on positioned elements (position: relative, absolute, fixed, or sticky)</li>
+                    <li>Can be negative</li>
+                </ul>
+                <div class="code-example">
+                    <code>z-index: 10;</code>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Responsive Design</h3>
+                <p>Used to create responsive designs:</p>
+                <ul>
+                    <li><strong>Media Queries</strong>: Apply different styles for different screen sizes</li>
+                    <li><strong>Flexbox</strong>: Flexible box layout system</li>
+                </ul>
+                <div class="code-example">
+                    <pre><code>@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}</code></pre>
+                </div>
+            </article>
+        </section>
+
+        <!-- JavaScript Section -->
+        <section id="js-section">
+            <h2>JavaScript</h2>
+
+            <article class="note-card">
+                <h3>Math Object</h3>
+                <p><strong>Methods:</strong></p>
+                <ul>
+                    <li><code>abs</code>, <code>ceil</code>, <code>floor</code>, <code>round</code></li>
+                    <li><code>max</code>, <code>min</code>, <code>pow</code>, <code>sqrt</code></li>
+                    <li><code>random</code>, <code>cos</code>, <code>sin</code>, <code>tan</code>, <code>log</code></li>
+                </ul>
+                <p><strong>Properties:</strong> <code>Math.E</code>, <code>Math.PI</code></p>
+                <div class="code-example">
+                    <pre><code>var rand1to10 = Math.floor(Math.random() * 10 + 1);
+var three = Math.floor(Math.PI);  // 3</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Array Methods</h3>
+                <p>Array serves as many data structures: list, queue, stack</p>
+                <div class="code-example">
+                    <pre><code>var a = ["Stef", "Jason"];
+a.push("Brian");      // adds to end → ["Stef", "Jason", "Brian"]
+a.unshift("Kelly");   // adds to front → ["Kelly", "Stef", "Jason", "Brian"]
+a.pop();              // removes from end → ["Kelly", "Stef", "Jason"]
+a.shift();            // removes from front → ["Stef", "Jason"]
+a.sort();             // sorts → ["Jason", "Stef"]</code></pre>
+                </div>
+                <p><strong>Other methods:</strong></p>
+                <ul>
+                    <li><code>concat</code>: Joins arrays</li>
+                    <li><code>join</code>: Joins elements into a string</li>
+                    <li><code>reverse</code>: Reverses array order</li>
+                    <li><code>slice</code>: Extracts a section</li>
+                    <li><code>splice</code>: Adds/removes elements</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h3>parseInt and parseFloat</h3>
+                <p><code>parseInt(string)</code>: Converts a string to an integer</p>
+                <div class="code-example">
+                    <code>parseInt("42") → 42</code><br>
+                    <code>parseInt("42.5") → 42</code><br>
+                    <code>parseInt("42px") → 42</code>
+                </div>
+                <p><code>parseFloat(string)</code>: Converts a string to a floating-point number</p>
+                <div class="code-example">
+                    <code>parseFloat("42.5") → 42.5</code><br>
+                    <code>parseFloat("3.14159") → 3.14159</code>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>DOM Properties</h3>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>tagName</code></td>
+                            <td>Element's HTML tag</td>
+                            <td><code>getElementById("main").tagName</code> → "DIV"</td>
+                        </tr>
+                        <tr>
+                            <td><code>className</code></td>
+                            <td>CSS classes of element</td>
+                            <td><code>getElementById("main").className</code> → "foo bar"</td>
+                        </tr>
+                        <tr>
+                            <td><code>innerHTML</code></td>
+                            <td>Content inside element</td>
+                            <td><code>getElementById("main").innerHTML</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>src</code></td>
+                            <td>URL target of an image</td>
+                            <td><code>getElementById("icon").src</code> → "images/potter.jpg"</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Example HTML:</strong></p>
+                <div class="code-example">
+                    <pre><code>&lt;div id="main" class="foo bar"&gt;
+    &lt;p&gt;Hello, I am &lt;em&gt;very&lt;/em&gt; happy to see you!&lt;/p&gt;
+    &lt;img id="icon" src="images/potter.jpg" alt="Potter" /&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Common DOM Styling Errors</h3>
+                <p><strong>Error 1: Forgetting to write .style</strong></p>
+                <div class="code-example">
+                    <p class="incorrect">✗ <code>clickMe.color = "red";</code></p>
+                    <p class="correct">✓ <code>clickMe.style.color = "red";</code></p>
+                </div>
+
+                <p><strong>Error 2: CSS property names</strong></p>
+                <p>Style properties are capitalized likeThis, not like-this</p>
+                <div class="code-example">
+                    <p class="incorrect">✗ <code>clickMe.style.font-size = "14pt";</code></p>
+                    <p class="correct">✓ <code>clickMe.style.fontSize = "14pt";</code></p>
+                </div>
+
+                <p><strong>Error 3: Values must be strings with units</strong></p>
+                <div class="code-example">
+                    <p class="incorrect">✗ <code>clickMe.style.width = 200;</code></p>
+                    <p class="correct">✓ <code>clickMe.style.width = "200px";</code></p>
+                    <p class="correct">✓ <code>clickMe.style.padding = "0.5em";</code></p>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Event-Driven Programming</h3>
+                <p><strong>What is it?</strong> A programming paradigm that relies on events (user actions, system events) to trigger code execution</p>
+                <p><strong>addEventListener()</strong>: Method to attach event listeners to elements</p>
+                <div class="code-example">
+                    <pre><code>element.addEventListener('click', function() {
+    alert('Clicked!');
+});</code></pre>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Timers in JavaScript</h3>
+                <p><code>setInterval(function, milliseconds)</code>: Executes a function repeatedly at specified intervals</p>
+                <div class="code-example">
+                    <pre><code>setInterval(function() {
+    console.log("This runs every 2 seconds");
+}, 2000);</code></pre>
+                </div>
+                <p><code>setTimeout(function, milliseconds)</code>: Executes a function once after a delay</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Unobtrusive JavaScript</h3>
+                <p><strong>What is it?</strong> JavaScript that avoids inline event handlers</p>
+                <p><strong>Why is it preferred?</strong></p>
+                <ul>
+                    <li>Separates HTML and JavaScript for better maintainability</li>
+                    <li>Makes code more reusable</li>
+                    <li>Easier to debug and test</li>
+                    <li>Better organization of code</li>
+                </ul>
+                <div class="code-example">
+                    <p class="incorrect">✗ Obtrusive: <code>&lt;button onclick="doSomething()"&gt;Click&lt;/button&gt;</code></p>
+                    <p class="correct">✓ Unobtrusive: Use addEventListener in separate JS file</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section">
+            <h2>Important Quiz Questions</h2>
+
+            <article class="quiz-card">
+                <h3>Question 1</h3>
+                <p><strong>What is the main difference between HTML and XHTML?</strong></p>
+                <ul>
+                    <li>A) XHTML uses fewer tags</li>
+                    <li class="correct-answer">B) XHTML is case-sensitive ✓</li>
+                    <li>C) XHTML does not support CSS</li>
+                    <li>D) XHTML is only for mobile devices</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 2</h3>
+                <p><strong>What does the &lt;canvas&gt; element in HTML5 allow you to do?</strong></p>
+                <ul>
+                    <li>A) Embed videos</li>
+                    <li class="correct-answer">B) Create 2D graphics ✓</li>
+                    <li>C) Style text</li>
+                    <li>D) Store data</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 3</h3>
+                <p><strong>What is the purpose of the &lt;progress&gt; element?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) Displays a loading bar ✓</li>
+                    <li>B) Submits forms</li>
+                    <li>C) Creates animations</li>
+                    <li>D) Displays images</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 4</h3>
+                <p><strong>What does the &lt;details&gt; element provide in HTML5?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) A collapsible section ✓</li>
+                    <li>B) A navigation menu</li>
+                    <li>C) A footer</li>
+                    <li>D) A header</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 5</h3>
+                <p><strong>Which of the following is a valid HTML5 doctype declaration?</strong></p>
+                <ul>
+                    <li>A) &lt;!DOCTYPE HTML PUBLIC&gt;</li>
+                    <li class="correct-answer">B) &lt;!DOCTYPE html&gt; ✓</li>
+                    <li>C) &lt;!DOCTYPE HTML5&gt;</li>
+                    <li>D) &lt;DOCTYPE&gt;</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 6</h3>
+                <p><strong>What is the purpose of the &lt;address&gt; tag?</strong></p>
+                <ul>
+                    <li>A) To create a list</li>
+                    <li class="correct-answer">B) To define contact information ✓</li>
+                    <li>C) To display images</li>
+                    <li>D) To create links</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 7</h3>
+                <p><strong>What is the purpose of the &lt;figure&gt; element?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) To group images and their captions ✓</li>
+                    <li>B) To create a table</li>
+                    <li>C) To display code</li>
+                    <li>D) To create a list</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 8</h3>
+                <p><strong>What attribute is used to specify a fallback image for the &lt;video&gt; tag?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) poster ✓</li>
+                    <li>B) src</li>
+                    <li>C) fallback</li>
+                    <li>D) fallbacksrc</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 9</h3>
+                <p><strong>What is the purpose of the &lt;template&gt; tag?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) To define reusable HTML code ✓</li>
+                    <li>B) To create forms</li>
+                    <li>C) To embed videos</li>
+                    <li>D) To display images</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 10</h3>
+                <p><strong>What is the correct way to declare the XML version in XHTML?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) &lt;?xml version="1.0"?&gt; ✓</li>
+                    <li>B) &lt;xml version="1.0"&gt;</li>
+                    <li>C) &lt;!DOCTYPE xml&gt;</li>
+                    <li>D) &lt;version="1.0"&gt;</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 11</h3>
+                <p><strong>Which attribute is used to specify the character encoding in XHTML?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) charset ✓</li>
+                    <li>B) encoding</li>
+                    <li>C) type</li>
+                    <li>D) meta</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 12</h3>
+                <p><strong>What does the xmlns attribute specify in an XHTML document?</strong></p>
+                <ul>
+                    <li>A) The language of the document</li>
+                    <li>B) The character encoding</li>
+                    <li class="correct-answer">C) The XML namespace ✓</li>
+                    <li>D) The author of the document</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 13</h3>
+                <p><strong>What is the correct way to declare a DOCTYPE for XHTML?</strong></p>
+                <ul>
+                    <li>A) &lt;!DOCTYPE HTML&gt;</li>
+                    <li class="correct-answer">B) &lt;!DOCTYPE XHTML 1.0 Strict&gt; ✓</li>
+                    <li>C) &lt;!DOCTYPE&gt;</li>
+                    <li>D) &lt;XHTML&gt;</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 14</h3>
+                <p><strong>How do you specify a language in an XHTML document?</strong></p>
+                <ul>
+                    <li>A) &lt;html lang="en"&gt;</li>
+                    <li>B) &lt;html xml:lang="en"&gt;</li>
+                    <li>C) &lt;meta language="en"&gt;</li>
+                    <li class="correct-answer">D) Both A and C ✓</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 15</h3>
+                <p><strong>What does the z-index property do in CSS?</strong></p>
+                <ul>
+                    <li>A) Controls the visibility of an element</li>
+                    <li class="correct-answer">B) Specifies the stacking order of elements ✓</li>
+                    <li>C) Changes the position of an element</li>
+                    <li>D) Adjusts the opacity of an element</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 16</h3>
+                <p><strong>Which of the following is used to create a responsive design in CSS?</strong></p>
+                <ul>
+                    <li>A) Media queries</li>
+                    <li>B) Float property</li>
+                    <li>C) Flexbox</li>
+                    <li class="correct-answer">D) Both A and C ✓</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 17</h3>
+                <p><strong>What does the display property control in CSS?</strong></p>
+                <ul>
+                    <li>A) The color of an element</li>
+                    <li>B) The visibility of an element</li>
+                    <li class="correct-answer">C) The layout behavior of an element ✓</li>
+                    <li>D) The size of an element</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 18</h3>
+                <p><strong>What is event-driven programming?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) A programming paradigm that relies on events ✓</li>
+                    <li>B) A method of structuring code in a linear fashion</li>
+                    <li>C) A form of procedural programming</li>
+                    <li>D) None of the above</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 19</h3>
+                <p><strong>Which method adds an event listener to an element in JavaScript?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) addEventListener() ✓</li>
+                    <li>B) attachEvent()</li>
+                    <li>C) onEvent()</li>
+                    <li>D) listenEvent()</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 20</h3>
+                <p><strong>Which function is used to set a timer in JavaScript?</strong></p>
+                <ul>
+                    <li class="correct-answer">A) setInterval() ✓</li>
+                    <li>B) setTimer()</li>
+                    <li>C) timerStart()</li>
+                    <li>D) intervalSet()</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 21</h3>
+                <p><strong>What is unobtrusive JavaScript?</strong></p>
+                <ul>
+                    <li>A) JavaScript that is written inline</li>
+                    <li class="correct-answer">B) JavaScript that avoids inline event handlers ✓</li>
+                    <li>C) JavaScript that is unobtrusive to the user interface</li>
+                    <li>D) JavaScript that is only used in Node.js</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 22</h3>
+                <p><strong>Why is unobtrusive JavaScript preferred?</strong></p>
+                <ul>
+                    <li>A) It makes the code shorter</li>
+                    <li>B) It improves performance</li>
+                    <li class="correct-answer">C) It separates HTML and JavaScript for better maintainability ✓</li>
+                    <li>D) It is easier to debug</li>
+                </ul>
+            </article>
+
+            <article class="quiz-card">
+                <h3>Question 23</h3>
+                <p><strong>Which attribute is used to specify an image map in HTML?</strong></p>
+                <ul>
+                    <li>A) src</li>
+                    <li class="correct-answer">B) usemap ✓</li>
+                    <li>C) href</li>
+                    <li>D) alt</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Interactive Examples Section -->
+        <section id="examples-section">
+            <h2>Interactive Examples</h2>
+            
+            <article class="note-card">
+                <h3>Box Model Demonstration</h3>
+                <div id="box-demo" class="interactive-box">
+                    <p>Hover over me!</p>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Details/Summary Example</h3>
+                <details>
+                    <summary>Click to expand</summary>
+                    <p>This is a collapsible section created with the &lt;details&gt; and &lt;summary&gt; elements!</p>
+                </details>
+            </article>
+
+            <article class="note-card">
+                <h3>Progress Bar Example</h3>
+                <progress value="70" max="100">70%</progress>
+                <p>70% complete</p>
+            </article>
+
+            <article class="note-card">
+                <h3>Figure and Figcaption Example</h3>
+                <figure>
+                    <div class="placeholder-image">Image Placeholder</div>
+                    <figcaption>Figure 1: This is a caption for the image</figcaption>
+                </figure>
+            </article>
+
+            <article class="note-card">
+                <h3>Link Pseudo-Classes Demo</h3>
+                <div class="link-demo">
+                    <a href="#" class="demo-link">Hover over this link</a>
+                    <p class="hint">Try hovering, clicking, and visiting the link to see different states</p>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>JavaScript DOM Manipulation</h3>
+                <div id="dom-demo">
+                    <p id="demo-text">Original Text</p>
+                    <button id="change-text-btn">Change Text</button>
+                    <button id="change-color-btn">Change Color</button>
+                    <button id="toggle-visibility-btn">Toggle Visibility</button>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h3>Math.random() Demo</h3>
+                <div id="random-demo">
+                    <p>Random number (1-10): <span id="random-number">-</span></p>
+                    <button id="generate-random-btn">Generate Random Number</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Study Guide created for Web Programming Midterm<br>
+            Contact: <a href="mailto:student@ejust.edu.eg">student@ejust.edu.eg</a>
+        </address>
+        <p>&copy; 2025 E-JUST Web Programming Course</p>
+    </footer>
+
+    <script src="study-script.js"></script>
+</body>
+</html>
